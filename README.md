@@ -1,33 +1,33 @@
-# solr-search
+## solr-search
 Different SOLR Search example and POC
 
-# Start Solr Server
+## Start Solr Server
 --> cd solr-6.6.0
 Linux :  bin/solr start
 Window : bin\solr.cmd start
 With different port - solr start -p 8984
 
-# Stop Solr
+## Stop Solr
 bin/solr stop -p 8983
 
-# Check if Solr is running
+## Check if Solr is running
 bin/solr status
 
-# Reference :
-https://gist.github.com/maxivak/3e3ee1fca32f3949f052
-http://www.codewrecks.com/blog/index.php/2013/04/29/loading-data-from-sql-server-to-solr-with-a-data-import-handler/
-https://lucene.apache.org/solr/guide/6_6/running-solr.html
-https://wiki.apache.org/solr/DataImportHandler
+## Reference :
+1. https://gist.github.com/maxivak/3e3ee1fca32f3949f052
+2. http://www.codewrecks.com/blog/index.php/2013/04/29/loading-data-from-sql-server-to-solr-with-a-data-import-handler/
+3. https://lucene.apache.org/solr/guide/6_6/running-solr.html
+4. https://wiki.apache.org/solr/DataImportHandler
 
-# Create solr using terminal (need root access)
-Linux : su - solr -c "/opt/solr/bin/solr create -c testcore -n data_driven_schema_configs"
-Windows : solr create -c <name> -n data_driven_schema_configs
-  NOTE : We need to start solr brfore creating core
+## Create solr using terminal (need root access)
+### Linux : su - solr -c "/opt/solr/bin/solr create -c testcore -n data_driven_schema_configs"
+### Windows : solr create -c <name> -n data_driven_schema_configs
+  NOTE : We need to start solr before creating core
 
-# Access Solr
+## Access Solr
 http://localhost:8983/solr/
 
-# Once Core is created we need to do following changes :
+## Once Core is created we need to do following changes :
 1. Goto solr-6.0.0/server/solr/<core-name>/lib
 2. Download following jars and place it here -
   a. mssql-jdbc-6.1.0.jre8
@@ -42,6 +42,11 @@ http://localhost:8983/solr/
 6. Go to http://localhost:8983/solr/
 7. you can see core core dropdown.
 
-# Indexing
+## Indexing
+1. GO TO http://localhost:8983/solr/#
+2. Select core from dropdown
+3. Click dataimport
+4. Click Execute.
+
 
 
