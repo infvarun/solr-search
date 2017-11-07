@@ -1,4 +1,4 @@
-## solr-search
+## Solr-search
 Different SOLR Search example and POC
 
 ## Start Solr Server
