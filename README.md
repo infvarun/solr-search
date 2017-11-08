@@ -56,6 +56,13 @@ http://localhost:8983/solr/
 ```
 3. Restart Solr.
 
+## Add fields in managed-schema
+1. Start SOLR
+2. Select core
+3. Goto Scheme menu option
+4. Click Add Field
+5. Give Field name and type and Check relevent checkbox
+
 ## Indexing
 1. GO TO http://localhost:8983/solr/#
 2. Select core from dropdown
