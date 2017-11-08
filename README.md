@@ -19,9 +19,9 @@ bin/solr status
 3. https://lucene.apache.org/solr/guide/6_6/running-solr.html
 4. https://wiki.apache.org/solr/DataImportHandler
 
-## Create solr using terminal (need root access)
+## Create solr core using terminal (need root access)
 ### Linux : su - solr -c "/opt/solr/bin/solr create -c testcore -n data_driven_schema_configs"
-### Windows : solr create -c <name> -n data_driven_schema_configs
+### Windows : solr create -c anycorename -n data_driven_schema_configs
   NOTE : We need to start solr before creating core
 
 ## Access Solr
@@ -64,7 +64,7 @@ http://localhost:8983/solr/
 5. Give Field name and type and Check relevent checkbox
 
 ## Indexing
-1. GO TO http://localhost:8983/solr/#
+1. Go To http://localhost:8983/solr/#
 2. Select core from dropdown
 3. Click dataimport
 4. Click Execute.
