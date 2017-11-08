@@ -41,6 +41,20 @@ http://localhost:8983/solr/
 5. Restart Solr --> solr restart -p 8983
 6. Go to http://localhost:8983/solr/
 7. you can see core core dropdown.
+8. Once core is created a directory is automatically generated at (solr-6.6.0\server\solr) with following important files in conf (1. solrconfig.xml, 2. managed-schema.xml).
+
+## Data Import setting :
+1. create a data-import.xml file in conf folder of your core. Refer in this repo for example. (You can give any name of this file)
+2. Edit solrconfig.xml to configure data-import file (the name you provided in step 1). Add following line :
+```xml
+  <lib dir="../lib/" regex="solr-dataimporthandler-\d.*\.jar" />
+	<requestHandler name="/dataimport" class="org.apache.solr.handler.dataimport.DataImportHandler">
+    <lst name="defaults">
+    <str name="config">data-import.xml</str>
+    </lst>
+	</requestHandler>
+```
+3. Restart Solr.
 
 ## Indexing
 1. GO TO http://localhost:8983/solr/#
