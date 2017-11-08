@@ -1,0 +1,28 @@
+<dataConfig>  
+    <dataSource type="JdbcDataSource"
+            driver="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+            url="jdbc:sqlserver://127.0.0.1:1433;databaseName=mydb_test4;"
+            user="root"
+            password="root"
+            batchSize="5" /> 
+             
+    <document name="USER">  
+        <entity name="User" query="select ID,ADDSTAMPLONG,ADDTIMEZONE,MODSTAMPLONG,MODTIMEZONE,USERNAME from USERTABLE;">  
+            <field column="Id" name="id" />
+            <field column="addstamplong" name="addstamplong" />  
+            <field column="ADDTIMEZONE" name="ADDTIMEZONE" />
+			<field column="MODSTAMPLONG" name="MODSTAMPLONG" />
+			<field column="MODTIMEZONE" name="MODTIMEZONE" />
+			<field column="USERNAME" name="USERNAME" />
+        </entity>
+        
+		<entity name="USERPROFILE" query="select id,username,firstname,lastname,email,isactive from PROFILETABLE">  
+            <field column="Id" name="id" />
+            <field column="FIRSTNAME" name="firstname" />  
+            <field column="LASTNAME" name="lastname" />
+			<field column="EMAIL" name="email" />
+			<field column="USERNAME" name="username" />
+			<field column="ISACTIVE" name="isactive" />		
+        </entity>
+    </document>  
+</dataConfig> 
