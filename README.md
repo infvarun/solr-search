@@ -3,9 +3,9 @@ Different SOLR Search example and POC
 
 ## Start Solr Server
 --> cd solr-6.6.0
-Linux :  bin/solr start
-Window : bin\solr.cmd start
-With different port - solr start -p 8984
+1. Linux :  bin/solr start
+2. Window : bin\solr.cmd start
+3. With different port : solr start -p 8984
 
 ## Stop Solr
 bin/solr stop -p 8983
